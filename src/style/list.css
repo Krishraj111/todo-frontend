@@ -1,0 +1,170 @@
+.task-list{
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    grid-template-columns: 100px 50px 1fr 2fr 200px;
+}
+
+.list-header{
+    font-weight: bold;
+    padding: 10px ;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+.list-item{
+    padding: 10px ;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.delete-item{
+     width:50%;
+    padding: 6px;
+    background-color: #ff2600;
+    color: white;
+    border: none;
+    border-radius: 3 px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.delete-item:hover{
+    background-color: #ac0909;
+}
+
+.update-item{
+     width:100%;
+    padding: 6px;
+    background-color: #22d661;
+    color: white;
+    border: none;
+    border-radius: 3 px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.update-item:hover{
+    background-color: #218926;
+}
+
+.delete-selected{
+   width: 100px;
+}
+
+.list-container{
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+/* added new css */
+
+.list-container {
+  background: white;
+  width: 80%;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.delete-item {
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-item {
+  background: #667eea;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.list-container {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+.list-container h1 {
+  color: var(--text-color);
+  font-weight: 600;
+}
+.list-header {
+  background: #f5f5f5;
+  color: #111;
+  font-weight: 600;
+}
+
+/* DARK MODE override */
+body.dark .list-header {
+  background: #334155;
+  color: #e5e7eb;
+}
+.list-item {
+  background: #ffffff;
+  color: #111;
+}
+
+/* DARK MODE */
+body.dark .list-item {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+body.dark .list-item .update-item {
+  background: #6366f1;
+  color: white;
+}
+
+body.dark .list-item .delete-item {
+  background: #ef4444;
+  color: white;
+}
+input[type="checkbox"] {
+  accent-color: #6366f1;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+  .list-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  /* Hide S.No on mobile */
+  .list-header:nth-child(2),
+  .list-item:nth-child(2) {
+    display: none;
+  }
+
+  /* Stack list like cards */
+  .task-list {
+    display: block;
+  }
+
+  .list-header {
+    display: none;
+  }
+
+  .list-item {
+    display: block;
+    background: var(--card-bg);
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .list-item button,
+  .list-item a {
+    display: inline-block;
+    margin-top: 8px;
+  }
+}

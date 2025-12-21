@@ -1,0 +1,139 @@
+/* .container{
+     max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+} */
+
+
+.container {
+  background: white;
+  width: 420px;
+  margin: 60px auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.container {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+label{
+    font-weight: 600;
+    display: block;
+    color: #555;
+    margin: 8px;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom: 15px;
+    border:1px solid #ccc;
+    border-radius: 6px;
+    font-size:16px;
+    box-sizing: border-box;
+
+}
+
+button{
+    width:100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: #0056b3;
+}
+
+/* Added new css */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+.submit {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.container {
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+input, textarea {
+  background: transparent;
+  color: var(--text-color);
+}
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+
+/* responsive design  */
+@media (max-width: 768px) {
+  .container {
+    width: 92%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+  }
+
+  .submit {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
