@@ -20,40 +20,40 @@ function App() {
   location.pathname === "/signup";
 
 
- useEffect(() => {
-  const checkAuth = async () => {
-    try {
-      const res = await fetch("http://localhost:3200/check-auth", {
-        method: "GET",
-        credentials: "include"
-      });
+//  useEffect(() => {
+//   const checkAuth = async () => {
+//     try {
+//       const res = await fetch("http://localhost:3200/check-auth", {
+//         method: "GET",
+//         credentials: "include"
+//       });
 
-      const data = await res.json();
+//       const data = await res.json();
 
-      if (data.success) {
-        localStorage.setItem("login", data.user.email);
-      } else {
-        localStorage.removeItem("login");
-        if (
-          location.pathname !== "/login" &&
-          location.pathname !== "/signup"
-        ) {
-          navigate("/login");
-        }
-      }
-    } catch (error) {
-      localStorage.removeItem("login");
-      if (
-        location.pathname !== "/login" &&
-        location.pathname !== "/signup"
-      ) {
-        navigate("/login");
-      }
-    }
-  };
+//       if (data.success) {
+//         localStorage.setItem("login", data.user.email);
+//       } else {
+//         localStorage.removeItem("login");
+//         if (
+//           location.pathname !== "/login" &&
+//           location.pathname !== "/signup"
+//         ) {
+//           navigate("/login");
+//         }
+//       }
+//     } catch (error) {
+//       localStorage.removeItem("login");
+//       if (
+//         location.pathname !== "/login" &&
+//         location.pathname !== "/signup"
+//       ) {
+//         navigate("/login");
+//       }
+//     }
+//   };
 
-  checkAuth();
-}, []);
+//   checkAuth();
+// }, []);
 
   return (
     <>
