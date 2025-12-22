@@ -25,7 +25,7 @@ export default function Login() {
         result=await result.json();
         if(result.success){ 
           // console.log(result);
-           document.cookie="token="+result.token
+          // document.cookie="token="+result.token
            localStorage.setItem('login',userData.email)
            window.dispatchEvent(new Event("localStorage-change"));
             navigate('/')
