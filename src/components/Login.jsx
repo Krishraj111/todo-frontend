@@ -5,11 +5,11 @@ import { Link,useNavigate } from "react-router-dom";
 export default function Login() {
     const [userData, setUserData] = useState({});
     const navigate=useNavigate();
-    useEffect(()=>{
-      if(localStorage.getItem('login')){
-        navigate('/')
-    }
-},[]);
+//     useEffect(()=>{
+//       if(localStorage.getItem('login')){
+//         navigate('/')
+//     }
+// },[]);
 
         const handleLogin=async()=>{
        console.log(userData);
@@ -18,7 +18,7 @@ export default function Login() {
             body:JSON.stringify(userData),
             credentials: "include",
             headers:{
-                'Content-Type':'Application/Json'
+                'Content-Type':'application/json'
             } 
         })
 

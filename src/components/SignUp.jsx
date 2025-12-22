@@ -7,11 +7,11 @@ export default function SignUp() {
     const [userData, setUserData] = useState({});
     const navigate=useNavigate();
 
-        useEffect(()=>{
-          if(localStorage.getItem('login')){
-            navigate('/')
-        }
-    },[]);
+    //     useEffect(()=>{
+    //       if(localStorage.getItem('login')){
+    //         navigate('/')
+    //     }
+    // },[]);
 
     const handleSignUp=async()=>{
        console.log(userData);
@@ -20,7 +20,7 @@ export default function SignUp() {
             body:JSON.stringify(userData),
             credentials: "include",
             headers:{
-                'Content-Type':'Application/Json'
+                'Content-Type':'application/json'
             } 
         })
 
