@@ -30,7 +30,7 @@ export default function Login() {
            window.dispatchEvent(new Event("localStorage-change"));
             navigate('/')
         }else{
-          alert("login failed")
+          alert(result.message);
         }
   }
 

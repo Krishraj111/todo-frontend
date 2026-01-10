@@ -31,7 +31,7 @@ export default function SignUp() {
             localStorage.setItem('login',userData.email)
             navigate('/')
         }else{
-        alert("try after sometime")
+        alert(result.message);
         }
   }
 
