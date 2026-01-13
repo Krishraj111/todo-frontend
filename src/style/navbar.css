@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     display: flex;
     justify-content: space-between;
     background-color: #242424;
@@ -24,10 +24,10 @@
 .nav-links a:hover{
     text-decoration: underline;
     color: #bfbcbc;
-}
+} */
 
 /* added new css */
-.navbar {
+/* .navbar {
   background: rgba(255,255,255,0.95);
   padding: 15px 40px;
   display: flex;
@@ -60,11 +60,11 @@
 .navbar a,
 .logo {
   color: var(--text-color);
-}
+} */
 
 
 /* responsive design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -83,5 +83,108 @@
   .nav-links li a,
   .nav-links li button {
     font-size: 16px;
+  }
+} */
+
+/* NEW styles */
+/* ================= ORIGINAL CODE ================= */
+/*
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #242424;
+    padding: 5px 10px;
+    align-items: center;
+    color: #fff;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}  
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}    
+.nav-links a:hover{
+    text-decoration: underline;
+    color: #bfbcbc;
+}
+*/
+
+/* ================= NEW THEME STYLE ================= */
+
+.navbar {
+  background: rgba(255,255,255,0.95);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #667eea;
+}
+
+/* ===== Theme color support ===== */
+.navbar {
+  background: var(--nav-bg);
+  color: var(--text-color);
+}
+.navbar,
+.navbar a,
+.logo {
+  color: var(--text-color);
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  .logo {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+  }
+
+  .nav-links li a,
+  .nav-links li button {
+    font-size: 14px;
   }
 }

@@ -90,15 +90,54 @@ const deleteMultiple=async()=>{
         <li className="list-header">Action</li>
 
         {taskData && taskData.map((item, index) => (
+            // <Fragment key={item._id}>
+            //     <li className="list-item"><input onChange={()=>selectSingleItem(item._id)} checked={selectedTask.includes(item._id)} type="checkbox"/></li>
+            //   <li className="list-item">{index + 1}</li>
+            //   <li className="list-item">{item.title}</li>
+            //   <li className="list-item">{item.description}</li>
+            //   <li className="list-item"><button onClick={() => deleteTask(item._id)} className="delete-item">Delete</button>
+            //   <Link to={"update/"+item._id} className="update-item">Update</Link>
+            //   </li>
+            // </Fragment>
+
             <Fragment key={item._id}>
-                <li className="list-item"><input onChange={()=>selectSingleItem(item._id)} checked={selectedTask.includes(item._id)} type="checkbox"/></li>
-              <li className="list-item">{index + 1}</li>
-              <li className="list-item">{item.title}</li>
-              <li className="list-item">{item.description}</li>
-              <li className="list-item"><button onClick={() => deleteTask(item._id)} className="delete-item">Delete</button>
-              <Link to={"update/"+item._id} className="update-item">Update</Link>
-              </li>
-            </Fragment>
+
+  <li className="list-item" data-label="Select">
+    <input
+      onChange={()=>selectSingleItem(item._id)}
+      checked={selectedTask.includes(item._id)}
+      type="checkbox"
+    />
+  </li>
+
+  <li className="list-item" data-label="S.No">
+    {index + 1}
+  </li>
+
+  <li className="list-item" data-label="Title">
+    {item.title}
+  </li>
+
+  <li className="list-item" data-label="Description">
+    {item.description}
+  </li>
+
+  <li className="list-item" data-label="Action">
+    <button
+      onClick={() => deleteTask(item._id)}
+      className="delete-item"
+    >
+      Delete
+    </button>
+    <Link
+      to={"update/" + item._id}
+      className="update-item"
+    >
+      Update
+    </Link>
+  </li>
+
+</Fragment>
           ))}
       </ul>
     </div>
